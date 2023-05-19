@@ -1,4 +1,5 @@
-import {healthStatus,heroys} from '../src/index.js'
+import {healthStatus} from '../src/index.js'
+import {heroys,sort} from '../src/sort.js'
 
 
 describe("healthStatus", () => {
@@ -20,7 +21,11 @@ describe("healthStatus", () => {
 
 describe("Heroy Sort", () => {
   test('Heroy Sort', () => {
-    let res = heroys.map(el => el.health)
-    expect(res).toEqual([100,80,10]);
+   const toEqual = [
+    {name: 'маг', health: 100},
+    {name: 'лучник', health: 80},
+    {name: 'мечник', health: 10},
+  ];
+    expect(sort(heroys)).toEqual(toEqual);
   })
 })

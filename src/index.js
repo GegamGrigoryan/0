@@ -10,9 +10,3 @@ export function healthStatus(name, health) {
         return 'critical'
     }
 }
-
-export let heroys = [
-    { name: 'мечник', health: 10 },
-    { name: 'маг', health: 100 },
-    { name: 'лучник', health: 80 },
-].sort((prev, next) => next.health - prev.health);
